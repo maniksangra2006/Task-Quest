@@ -1,0 +1,4 @@
+project_id = "uscgxsezholjszsqajle"
+
+[functions.task-suggestions]
+verify_jwt = true

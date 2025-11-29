@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47% 11%;
+
+    --primary: 270 70% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 47% 11%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16% 47%;
+
+    --accent: 280 80% 65%;
+    --accent-foreground: 222.2 47% 11%;
+
+    --destructive: 0 65% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 270 70% 60%;
+
+    --radius: 0.75rem;
+
+    --success: 142 76% 45%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --info: 200 80% 55%;
+    --info-foreground: 0 0% 100%;
+
+    --pink: 330 75% 65%;
+    --pink-foreground: 0 0% 100%;
+
+    --cyan: 180 70% 60%;
+    --cyan-foreground: 0 0% 100%;
+
+    --indigo: 240 65% 60%;
+    --indigo-foreground: 0 0% 100%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(270 70% 60%), hsl(280 80% 65%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(270 20% 98%));
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 45%), hsl(142 76% 55%));
+    --gradient-info: linear-gradient(135deg, hsl(200 80% 55%), hsl(180 70% 60%));
+    --gradient-pink: linear-gradient(135deg, hsl(330 75% 65%), hsl(280 80% 65%));
+    --gradient-cyan: linear-gradient(135deg, hsl(180 70% 60%), hsl(200 80% 55%));
+    
+    --glow-primary: 0 0 60px hsl(270 70% 60% / 0.6), 0 0 100px hsl(270 70% 60% / 0.3);
+    --glow-success: 0 0 40px hsl(142 76% 45% / 0.5), 0 0 80px hsl(142 76% 45% / 0.2);
+    --glow-accent: 0 0 50px hsl(280 80% 65% / 0.5), 0 0 90px hsl(280 80% 65% / 0.3);
+    --glow-info: 0 0 50px hsl(200 80% 55% / 0.5), 0 0 90px hsl(200 80% 55% / 0.3);
+    --glow-pink: 0 0 50px hsl(330 75% 65% / 0.5), 0 0 90px hsl(330 75% 65% / 0.3);
+    --glow-cyan: 0 0 50px hsl(180 70% 60% / 0.5), 0 0 90px hsl(180 70% 60% / 0.3);
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 222.2 47% 11%;
+    --sidebar-primary: 270 70% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 40% 96%;
+    --sidebar-accent-foreground: 222.2 47% 11%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 270 70% 60%;
+  }
+
+  .dark {
+    --background: 220 25% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 220 20% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 220 20% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 270 70% 60%;
+    --primary-foreground: 220 25% 8%;
+
+    --secondary: 220 18% 18%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 220 18% 18%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 280 80% 65%;
+    --accent-foreground: 220 25% 8%;
+
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 270 70% 60%;
+
+    --success: 142 76% 45%;
+    --success-foreground: 0 0% 98%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 220 25% 8%;
+
+    --info: 200 80% 55%;
+    --info-foreground: 0 0% 98%;
+
+    --pink: 330 75% 65%;
+    --pink-foreground: 0 0% 98%;
+
+    --cyan: 180 70% 60%;
+    --cyan-foreground: 0 0% 98%;
+
+    --indigo: 240 65% 60%;
+    --indigo-foreground: 0 0% 98%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(270 70% 60%), hsl(280 80% 65%));
+    --gradient-card: linear-gradient(145deg, hsl(220 20% 12%), hsl(270 15% 15%));
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 45%), hsl(142 76% 55%));
+    --gradient-info: linear-gradient(135deg, hsl(200 80% 55%), hsl(180 70% 60%));
+    --gradient-pink: linear-gradient(135deg, hsl(330 75% 65%), hsl(280 80% 65%));
+    --gradient-cyan: linear-gradient(135deg, hsl(180 70% 60%), hsl(200 80% 55%));
+    
+    --glow-primary: 0 0 60px hsl(270 70% 60% / 0.5), 0 0 100px hsl(270 70% 60% / 0.3), 0 0 140px hsl(270 70% 60% / 0.1);
+    --glow-success: 0 0 40px hsl(142 76% 45% / 0.4), 0 0 80px hsl(142 76% 45% / 0.2);
+    --glow-accent: 0 0 50px hsl(280 80% 65% / 0.4), 0 0 90px hsl(280 80% 65% / 0.2);
+    --glow-info: 0 0 50px hsl(200 80% 55% / 0.4), 0 0 90px hsl(200 80% 55% / 0.2);
+    --glow-pink: 0 0 50px hsl(330 75% 65% / 0.4), 0 0 90px hsl(330 75% 65% / 0.2);
+    --glow-cyan: 0 0 50px hsl(180 70% 60% / 0.4), 0 0 90px hsl(180 70% 60% / 0.2);
+    
+    --sidebar-background: 220 22% 10%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 270 70% 60%;
+    --sidebar-primary-foreground: 220 25% 8%;
+    --sidebar-accent: 220 18% 16%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 220 15% 18%;
+    --sidebar-ring: 270 70% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Geist Sans', system-ui, sans-serif;
+  }
+
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-105;
+  }
+}
